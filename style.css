@@ -221,7 +221,6 @@ input[type=radio] {
     margin: auto;
     transition: transform .4s ease;
     cursor: pointer;
-    /*z-index: 1;  Asegúrate de que no esté por encima de otros elementos innecesariamente */
 }
 
 img {
