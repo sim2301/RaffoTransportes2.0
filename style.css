@@ -16,7 +16,8 @@ html {
 }
 
 .inicio {
-    background: url(image/camiones/img_carru1.jpg) no-repeat;
+    background: url('image/camiones/img_carru1.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,6 +71,15 @@ strong {
         transform: translateY(-5px);
     }
 }
+
+@media (max-width:768px){
+    .inicio{
+        background: url('image/camiones/img_carru1.jpg') no-repeat center center;
+        background-size: cover;
+    }
+} 
+
+/* Menu */
 #btn-menu {
     display: none;
 }
@@ -162,16 +172,19 @@ header label {
         flex-direction: column;
     }
 
-    .menu li {
+    /* .menu li {
         border-top: 1px solid #fff;
-    }
+    } */
 
     #btn-menu:checked~.menu {
         margin: 0;
     }
 
     .menu {
-        background-color: gray;
+        background-color: #8e9eab;
+    }
+    nav span{
+        color: #13c5dd;
     }
 }
 
@@ -246,6 +259,13 @@ img {
     }
 }
 
+@media (max-width: 768px) {
+    .card {
+        width: 75%;
+        height: 45%;
+    }
+}
+
 
 /* Sobre Nosotros */
 #sobre h1 {
@@ -306,6 +326,34 @@ img {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .sobre-card {
+        flex-direction: column; /* Cambio aquí */
+        align-items: center; /* Centrar el contenido */
+    }
+
+    .sobre-card-image {
+        width: 100%; /* Imagen ocupa el ancho completo */
+        height: auto; /* Ajustar altura automáticamente */
+        margin-right: 0; /* Eliminar margen a la derecha */
+        margin-bottom: 10px; /* Añadir margen inferior */
+    }
+
+    .sobre-card-content {
+        padding: 10px;
+    }
+
+    .sobre-card-content h2 {
+        font-size: 1.5rem; /* Aumentar el tamaño del título */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .sobre-card-content p {
+        font-size: 1rem; /* Aumentar el tamaño del texto */
+        text-align: center; /* Centrar el texto */
+    }
 }
 
 /* Servicios */
@@ -399,6 +447,18 @@ img {
     line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+    .servi-cards1,
+    .servi-cards2 {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .servi-card{
+        margin-bottom: 15px;
+    }
+}
+
 /* Clientes */
 #client h1 {
     font-size: 2em;
@@ -406,51 +466,41 @@ img {
     margin: 40px 0px 40px 0px;
 }
 
-.carrousel-container {
+.carousel-container {
     overflow: hidden;
-    /* Oculta los logos que salen del contenedor */
     width: 100%;
-    /* Ajusta al ancho deseado */
+    position: relative;
 }
 
 .empresas {
     display: flex;
     animation: scroll 20s linear infinite;
-    /* Duración y estilo de animación */
     width: max-content;
-    /* Permite que la pista tenga el ancho adecuado */
 }
 
 .carrousel-item {
     min-width: 200px;
-    /* Ancho de cada logo */
     margin: 0 20px;
-    /* Espaciado entre logos */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .carrousel-item img {
-    /* Asegura que las imágenes no se salgan del contenedor */
     width: 150px;
-    height: 150px;
     height: auto;
 }
 
-/* Animación de desplazamiento */
 @keyframes scroll {
     from {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
-
     to {
         transform: translateX(-100%);
     }
 }
 
 /* Footer */
-
 .iconos {
     padding-top: 20px;
     /* background-color: hsla(209 70% 3% / 100%);  */
@@ -595,4 +645,35 @@ footer h3 {
 
 #contacto{
     margin-top: 50px;
+}
+
+@media (max-width: 768px){
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .ubi{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .ubi i{
+        margin-right: 0;
+    }
+    .icon>i {
+        color: inherit; /* Hereda el color de la propiedad de la clase .icon */
+    }
+
+    .icon:before {
+        background: var(--color);
+    }
+
+    .icon:hover>i {
+        color: inherit; /* El color no cambia en el hover */
+    }
+
+    .icon:hover:before {
+        animation: none; /* Desactiva la animación en dispositivos móviles */
+    }
 }
