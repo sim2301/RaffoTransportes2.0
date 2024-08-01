@@ -282,6 +282,9 @@ img {
 
 
 /* Sobre Nosotros */
+#sobre, #client{
+    background: #e0e0e075;
+}
 #sobre h1 {
     font-size: 2em;
     text-align: center;
@@ -490,6 +493,7 @@ img {
     display: flex;
     animation: scroll 20s linear infinite;
     width: max-content;
+    margin-bottom: 20px;
 }
 
 .carrousel-item {
@@ -507,12 +511,13 @@ img {
 
 @keyframes scroll {
     from {
-        transform: translateX(0%);
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
+
 
 /* Footer */
 .iconos {
@@ -657,9 +662,6 @@ footer h3 {
     margin-top: 20px;
 }
 
-#contacto{
-    margin-top: 50px;
-}
 
 @media (max-width: 768px){
     .footer-content{
