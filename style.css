@@ -16,20 +16,27 @@ html {
 }
 
 .inicio {
-    background: url('image/camiones/img_carru1.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: url('image/camiones/imp.exp1.jpg') no-repeat; 
+    background-size: /*cover*/ 1310px 900px;
+    background-position: center;
     height: 100vh;
+}
+.inicio{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
 }
 
 .inicio .tit {
     margin-bottom: 1rem;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
+    
     padding: 20px;
+    /* border: 2px solid black; */
+    border-radius: 25px ;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
 
 .inicio h1 {
@@ -74,8 +81,9 @@ strong {
 
 @media (max-width:768px){
     .inicio{
-        background: url('image/camiones/img_carru1.jpg') no-repeat center center;
+        background: url('image/camiones/imp.exp1.jpg') no-repeat center center;
         background-size: cover;
+        background-position: right;
     }
 } 
 
@@ -96,6 +104,13 @@ header label {
     justify-content: space-around;
     align-items: center;
     font-size: 1.2em;
+    backdrop-filter: blur(30px);
+    /* background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+.menu:hover, .tit:hover{
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu ul {
@@ -122,7 +137,7 @@ header label {
 
 .menu li:hover a {
     cursor: pointer;
-    color: #13c5dd;
+    color:#F1C40F;
 }
 
 .nav-link::before {
@@ -133,7 +148,7 @@ header label {
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #13c5dd;
+    background-color:#F1C40F;
     visibility: hidden;
     transition: all 0.3s ease-in-out 0s;
 }
@@ -184,7 +199,7 @@ header label {
         background-color: #8e9eab;
     }
     nav span{
-        color: #13c5dd;
+        color:#F1C40F;
     }
 }
 
